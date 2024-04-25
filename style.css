@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
+body, html{
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #121212;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555; 
+  border-radius: 2px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: #836d6d00; 
+}
+
+.m {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  
+  z-index: 1000; 
+
+  display: flex;
+  justify-content: center;
+}
+
+.m.scrolled {
+  background-color: #000000b0; 
+  transition: 1.30s ease-in-out;
+}
+
+.m ul {
+  list-style-type: none;
+  margin: 10px;
+  padding: 0;
+}
+
+.m li {
+  display: inline;
+}
+
+.m a {
+  display: inline-block;
+
+  padding: 3rem;
+  color: rgba(255, 255, 255, 0.801);
+  text-decoration: none;
+
+  font-family: 'Courier New', Courier, monospace;
+
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+}
+
+.m a:hover {
+  color: #555;
+}
+
+.m ul li:not(:last-child)::after {
+  color: #a5a5a5;
+  content: '•';
+  margin: 0 5px; 
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pre{
+  max-width: 100%;
+  max-height: 400px; 
+
+  font-family: "Bitter", serif;
+  display: flex; 
+
+  margin: 150px;
+}
+
+.pre span{
+  font-family: "Dancing Script", cursive;
+  color: #2a3a58;
+}
+
+.pre h2{
+  font-size: 5rem;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 10px;
+}
+
+.pre p{
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.text_img{
+  max-width: 100%;
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  
+  display: flex;
+  flex-wrap: nowrap;
+
+  padding: 4rem;
+  align-items: center;
+}
+
+.text_img img{
+  max-width: 10rem;
+  max-height: 10rem;
+
+  filter: blur(2px);
+}
+
+.cont_img{
+  flex-direction: row-reverse;
+  display: flex;
+  flex-wrap: nowrap;
+
+  max-width: 300px;
+
+ padding: 4rem;
+}
+
+.cont_img p{
+  font-size: 1.25rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.imgdes img{
+  max-width: 10rem;
+  max-height: 10rem;
+  border-radius: 10px;
+  margin: 2px;
+
+  filter: blur(2px)
+}
+
+.sites{
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.sites h1{
+  margin: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+}
+
+.fileira{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.s1{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin: 15px;
+  color: white;
+
+  max-width: 250px;
+}
+
+.s1 p{
+  color: white;
+  transition: 0.3s ease-in-out;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 5px;
+  font-size: 1rem;
+}
+
+.s1 p:hover{
+  color: #2a3a58;
+}
+
+.sites .s1 img{
+  max-width: 150px;
+  max-height: 150px;
+
+  margin: 5px;
+  filter: grayscale(100%);
+
+  transition: 0.3s ease-in-out;
+}
+
+.sites .s1 img:hover{
+  filter: grayscale(0%);
+}
+
+
+.r{
+  background-color: #00000000;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem;
+}
+
+.r h2{
+  font-size: 5rem;
+  font-family: 'Courier New', Courier, monospace;
+  max-width: 5rem;
+}
+
+.r a{
+  text-decoration: none;
+  color: #2a3a58;
+
+  display: flex;
+  align-items: flex-end;
+
+  transition: 0.3s ease-in-out;
+}
+
+.r a:hover{
+  color: white;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  main{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pre{
+    flex-direction: column;
+    align-items: center;
+
+    margin: 20px;
+  }
+
+  .pre p{
+    font-size: 2.75rem;
+  }
+
+  .m a{
+    padding: 0;
+  }
+
+  .text_img {
+    font-size: 1.30rem;
+    flex-direction: column-reverse;
+
+    align-items: self-end;
+  }
+
+  .text_img img{
+    max-width: 5rem;
+    max-height: 5rem;
+  }
+
+  .r{
+    display: flex;
+    flex-direction: column;
+  }
+}
